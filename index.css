@@ -17,23 +17,19 @@ body {
     left:0;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: auto;
 }
 
 #time_flow {
     position: absolute;
     top:0;
     left:0;
-    height: 100vh;
-    overflow-x: auto;
+    height: 98vh;
 }
  #markers {
     position: relative;
     top:0;
     left:0;
-    height: 100vh;
-    width: 100vw;
-    overflow-x: auto;
     white-space: nowrap;
  }
  #flat_line {
@@ -44,12 +40,65 @@ body {
     height: 0;
     width: 100%;
  }
- .century-block {
+
+.century-block {
     position: relative;
     display: inline-flex;
     align-items: center;
     top:0;
     height: 98vh;
-    width: 30rem;
+    border-left: 1px solid #00000022;
+}
+
+ 
+#gallery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.art-pos {
+    position: absolute;
+    top: 50%;
     border-left: 1px solid #00000055;
- }
+}
+.art-pos.north {
+    transform: translateY(-100%)
+}
+.art-pos.south {
+    align-items: end;
+}
+
+
+.card {
+    border: 1px solid #00000055;
+    border-left-width: 0;
+    background: #fff;
+    position: absolute;
+    display: flex;
+}
+.south .card { bottom: 0; }
+
+.card > * {
+    margin: .5em;
+}
+.card img {
+    max-height: 7em;
+    width: auto;
+}
+
+.info {
+    width: max-content;
+    max-width: 20em;
+    display: none;
+}
+
+.card:hover .info {
+    display: block;
+}
+
+.info .title {
+    font-weight: bold;
+    font-size: 1.1em;
+}

@@ -7,14 +7,32 @@
 </head>
 <body>
     <div id="time_scroll">
-        <div id="flat_line"></div>
-        <h1>ARTHC Timeline</h1>
+        <h1 style="opacity:.25">ARTHC Timeline</h1>
         <div id="time_flow">
+            <div id="flat_line"></div>
             <div id="markers">
-                <div class="century-block"><h5>1200</h5></div>
-                <div class="century-block" id="1300"><h5>1300</h5></div>
+                <div v-for="era in eras" class="century-block" :style="eraStyle"><h5>{{era}}</h5></div>
+            </div>
+            <div id="gallery">
+                <div v-for="piece in galleryEls" :class="piece.classes" :style="piece.styles">
+                    <!-- <div style="position: relative; height: 100%; width: 100%;"> -->
+                        <div class="card">
+                            <img :src="piece.img" :alt="piece.name">
+                            <div class="info">
+                                <div class="title">{{piece.name}}</div>
+                                <div class="artist">{{piece.artist}}</div>
+                                <div class="period">{{piece.period}}</div>    
+                                <div class="year">{{piece.year}}</div>    
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./index.js"></script>
+
 </body>
 </html>
