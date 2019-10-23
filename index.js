@@ -29,8 +29,9 @@ var app = new Vue ({
             let array = []
             this.gallery.forEach ( piece => {
                 let obj = piece;
-                obj.styles = `left: ${(piece.year - this.startYear) * this.yearUnit}rem; min-height: ${piece.pos/2}%`;
+                obj.styles = `left: ${(piece.year - this.startYear) * this.yearUnit}rem; height: ${piece.pos/2}%`;
                 obj.classes = `art-pos ${piece.loc}`;
+                obj.id = `piece_${array.length}`
 
                 array.push(obj)
             })
