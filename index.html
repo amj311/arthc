@@ -11,7 +11,7 @@
         <div id="time_flow">
             <div id="flat_line"></div>
             <div id="markers">
-                <div v-for="era in eras" class="century-block" :style="eraStyle"><h5>{{era}}</h5></div>
+                <div v-for="era in eras" class="century-block" :style="eraStyle"><h3>{{era}}</h3></div>
             </div>
             <div id="gallery">
                 <div v-for="piece in galleryEls" :class="piece.classes" :style="piece.styles">
@@ -30,6 +30,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./gallery.js"></script>
     <script src="./index.js"></script>
 
 </body>
