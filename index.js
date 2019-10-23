@@ -1,15 +1,36 @@
 var app = new Vue ({
-    el: '#time_flow',
+    el: '#app',
 
     data: {
         gallery: [],
         startYear: 1200,
         numCenturies: 6,
         yearUnit: .4,
+        isQuizAll: false,
+        theaterOn: false,
+        subsOn: false,
+        theaterData: {},
     },
 
     created() {
         this.gallery = galleryData;
+    },
+
+    methods: {
+        setTheaterImage(obj) {
+            obj.bgSrc = `background-image: url(${obj.img})`;
+            this.theaterData = obj;
+
+            this.toggleTheater();
+        },
+
+        toggleTheater() {
+            this.theaterOn = !this.theaterOn;
+        },
+        
+        toggleSubs() {
+            this.subsOn = !this.subsOn;
+        }
     },
 
     computed: {
