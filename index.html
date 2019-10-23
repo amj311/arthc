@@ -16,8 +16,11 @@
             </div>
             <div id="gallery">
                 <div v-for="piece in galleryEls" :class="piece.classes" :style="piece.styles">
-                    <div class="card">
-                        <img @click="setTheaterImage(piece)" :src="piece.img" :alt="piece.name">
+                    <div class="card" @mouseenter="toggleImgCover" @mouseleave="toggleImgCover">
+                        <div class="image">
+                            <img @click="setTheaterImage(piece)" :src="piece.img" :alt="piece.name">
+                            <div v-show="coverImg" class="imgCover"></div>
+                        </div>
                         <div class="info">
                             <div class="title">{{piece.name}}</div>
                             <div class="artist">{{piece.artist}}</div>

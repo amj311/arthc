@@ -100,15 +100,21 @@ body {
 .card > * {
     margin: .3em;
 }
-.card img {
+.image {
+    position: relative;
+}
+.image img {
     height: 7em;
     max-height: 13vh;
     width: auto;
-    pointer-events: none;
-}
-.card:hover img {
-    pointer-events: all;
     cursor: zoom-in;
+}
+.image .imgCover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .art-pos .info {

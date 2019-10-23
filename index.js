@@ -7,6 +7,7 @@ var app = new Vue ({
         numCenturies: 6,
         yearUnit: .4,
         isQuizAll: false,
+        coverImg: true,
         theaterOn: false,
         subsOn: false,
         theaterData: {},
@@ -30,6 +31,11 @@ var app = new Vue ({
         
         toggleSubs() {
             this.subsOn = !this.subsOn;
+        },
+
+        toggleImgCover() {
+            this.coverImg = !this.coverImg;
+            console.log(this.coverImg)
         }
     },
 
