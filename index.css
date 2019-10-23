@@ -69,6 +69,7 @@ body {
 }
 .art-pos:hover {
     color: skyblue;
+    border-left-width: 2px;
     z-index: 10;
 }
 .art-pos.north {
