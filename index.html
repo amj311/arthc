@@ -12,10 +12,10 @@
         <div id="time_flow">
             <div id="flat_line"></div>
             <div id="markers">
-                <div v-for="era in eras" class="century-block" :style="eraStyle"><h3>{{era}}</h3></div>
+                <div v-for="era in eras" class="century-block" :id="era" :style="eraStyle"><h3>{{era}}</h3></div>
             </div>
             <div id="gallery">
-                <div v-for="piece in galleryEls" :class="piece.classes" :style="piece.styles">
+                <div v-for="piece in galleryEls" :id="piece.idString" :class="piece.classes" :style="piece.styles">
                     <div class="card">
                         <div class="image">
                             <img :src="piece.img" :alt="piece.name">
@@ -31,7 +31,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 

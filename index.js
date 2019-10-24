@@ -63,7 +63,7 @@ var app = new Vue ({
                 let obj = piece;
                 obj.styles = `left: ${(piece.year - this.startYear) * this.yearUnit}rem; height: ${piece.pos/2}%`;
                 obj.classes = `art-pos ${piece.loc}`;
-                obj.id = `piece_${array.length}`
+                obj.idString = `piece_${obj.id}`
 
                 array.push(obj)
             })
