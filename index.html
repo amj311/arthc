@@ -16,10 +16,10 @@
             </div>
             <div id="gallery">
                 <div v-for="piece in galleryEls" :class="piece.classes" :style="piece.styles">
-                    <div class="card" @mouseenter="toggleImgCover" @mouseleave="toggleImgCover">
+                    <div class="card">
                         <div class="image">
-                            <img @click="setTheaterImage(piece)" :src="piece.img" :alt="piece.name">
-                            <div v-show="coverImg" class="imgCover"></div>
+                            <img :src="piece.img" :alt="piece.name">
+                            <div class="openTheater" @click="setTheaterImage(piece)"></div>
                         </div>
                         <div class="info">
                             <div class="title">{{piece.name}}</div>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
         </div>
-        <div id="exitTheater" @click="toggleTheater">&times;</div>
+        <div id="exitTheater" @click="closeTheater">&times;</div>
     </div>
 
 </div>

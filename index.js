@@ -9,7 +9,7 @@ var app = new Vue ({
         isQuizAll: false,
         coverImg: true,
         theaterOn: false,
-        subsOn: false,
+        subsOn: true,
         theaterData: {},
     },
 
@@ -22,11 +22,16 @@ var app = new Vue ({
             obj.bgSrc = `background-image: url(${obj.img})`;
             this.theaterData = obj;
 
-            this.toggleTheater();
+            this.openTheater();
         },
 
-        toggleTheater() {
-            this.theaterOn = !this.theaterOn;
+        openTheater() {
+            this.theaterOn = true;
+            this.subsOn = true;
+        },
+
+        closeTheater() {
+            this.theaterOn = false;
         },
         
         toggleSubs() {
@@ -65,4 +70,10 @@ var app = new Vue ({
             return array;
         }
     }
+})
+
+
+
+document.addEventListener('keyup', e => {
+    if (e.keyCode === 27 && app.theaterOn) { app.closeTheater() }
 })
