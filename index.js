@@ -4,7 +4,7 @@ var app = new Vue ({
     data: {
         gallery: [],
         startYear: 1200,
-        numCenturies: 6,
+        numCenturies: 9,
         yearUnit: .4,
         isQuizAll: false,
         coverImg: true,

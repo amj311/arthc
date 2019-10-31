@@ -8,6 +8,8 @@ const PERIODS = {
     "MAN":"Mannerism",
     "NB":"Northern Baroque",
     "SB":"Southern Baroque",
+    "Arch_R":"Renaissance Architecture",
+    "Arch_B":"Baroque Architecture"
 };
 
 
@@ -19,7 +21,7 @@ var galleryData = [
         "loc":"south",
         "pos":95,
         "img":"https://o.quizlet.com/GxyZM1cvo6d91ByVnGBuAA.png",
-        "period":"Renaissance Architcture",
+        "period":PERIODS.Arch_R,
         "id":0},
     {
         "name":"Villa Rotunda",
@@ -28,7 +30,7 @@ var galleryData = [
         "loc":"south",
         "pos":50,
         "img":"https://o.quizlet.com/i/WtybKZuN-YWIa9yCmkZuuA.jpg",
-        "period":"Renaissance Architcture",
+        "period":PERIODS.Arch_R,
         "id":1},
     {
         "name":"Virgin and Child Before a Fire Screen (Merode Altarpiece)",
